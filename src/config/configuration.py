@@ -1,1 +1,1 @@
-SERVICE_URL = "https://www.youtube.com/watch?v=q1u7XZ9c8fI"
+SERVICE_URL = "https://jsonplaceholder.typicode.com/users"
