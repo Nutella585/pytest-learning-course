@@ -6,6 +6,7 @@ sys.path.append("/Users/nutella585/repos/pytest-learninng-course")
 import requests
 
 # Custom imports
+from src.pydentic_schemas.get   import Get
 from src.base_classes.response  import Response
 from src.schemas.get            import GET_SCHEMA
 from src.config.configuration   import SERVICE_URL
@@ -20,4 +21,9 @@ def test_method_get():
     response = Response(r)
 
     response.assert_status_code(200)
-    response.validate(GET_SCHEMA)
+
+    # Using jsonschema.validate method
+    # response.validate(GET_SCHEMA)
+
+    # Using pydantic.validate method
+    response.validate(Get)
